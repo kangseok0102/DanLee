@@ -7,18 +7,18 @@ on the songs in their app and transfer data from local files into fact and dimen
 
 ## Files
 
-1. sql_queries.py: contains the sql queries and table details
+1. **sql_queries.py**: contains the sql queries and table details
 
-2. create_tables.py: connects to sparkify database and executes the sql queries to create and drop tables
+2. **create_tables.py**: connects to sparkify database and executes the sql queries to create and drop tables
 
-3. etl.ipynb: enables an engineer to test and process a single file by fllowing instructions in Jupyter Notebook  
+3. **etl.ipynb**: enables an engineer to test and process a single file by fllowing instructions in Jupyter Notebook  
 
-4. etl.py: reads **song** and **log** files to transfer data based on the table requirements
+4. **etl.py**: reads **song** and **log** files to transfer data based on the table requirements
     
-    - Fact Table: songplay
-    - Demension Table: user, songs, artists, time
+    - **Fact Table**: songplay
+    - **Demension Table**: user, songs, artists, time
 
-5. test.ipynb: shows few rows of each table to see if database and queries perform well 
+5. **test.ipynb**: shows few rows of each table to see if database and queries perform well 
 
 ## ETL Process
 

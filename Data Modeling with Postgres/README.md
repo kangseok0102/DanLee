@@ -23,7 +23,7 @@ on the songs in their app and transfer data from local files into fact and dimen
 
 ## Diagram
 
-![Fact and Dimensional Table Connection](\Desktop\Images\Diagram.JPG)
+![Fact and Dimensional Table Connection](Diagram.JPG)
 
 
 ## ETL Process

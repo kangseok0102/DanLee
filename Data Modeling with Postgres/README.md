@@ -20,6 +20,12 @@ on the songs in their app and transfer data from local files into fact and dimen
 
 5. **test.ipynb**: shows few rows of each table to see if database and queries perform well 
 
+
+## Diagram
+
+![Fact and Dimensional Tables Connection](C:\Users\Dan Lee\Desktop\Diagram.jpg)
+
+
 ## ETL Process
 
 1. Run create_tables.py file to establish connection with **Sparkify** database and create tables according to the sql queries in sql_queries.py

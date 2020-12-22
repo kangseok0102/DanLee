@@ -1,13 +1,13 @@
 import requests
 from bs4 import BeautifulSoup
 
-# Declare URL address for Webtoon
+# Declare URL address
 url = "https://comic.naver.com/webtoon/list.nhn?titleId=675554"
 res = requests.get(url)
 res.raise_for_status()
 soup = BeautifulSoup(res.text, "lxml")
 
-# Get Webtoon title and assigned link information
+# Get cartoon title and the assigned link information with rates
 def cartoon_title_link():
     cartoons = soup.find_all("td", attrs={"class":"title"})
     rates = soup.find_all("div", attrs={"class":"rating_type"})

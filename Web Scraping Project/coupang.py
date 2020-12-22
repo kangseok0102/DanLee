@@ -11,6 +11,11 @@ soup = BeautifulSoup(res.text, "lxml")
 items = soup.find_all("li", attrs={"class":re.compile("^search-product")})
 
 for item in items:
+
+    ad_badge = item.find("span", attrs={"class":"ad-badge-text"})
+    if ad_badge:
+        print("광고 제품 제외")
+        continue
     name = item.find("div", attrs={"class":"name"}).get_text()
     price = item.find("strong", attrs={"class":"price-value"}).get_text()
     rate = item.find("em", attrs={"class":"rating"})

@@ -20,13 +20,17 @@ def selenium_job_search():
 def requests_data_collect():
     selenium_job_search()
     interval = 2
+    more_jobs = browser.find_element_by_xpath("//*[@id='main-content']/div/section/button")
     prev_height = browser.execute_script("return document.body.scrollHeight")
-
+    count = 0
     while True:
+        count+=1
         browser.execute_script("window.scrollTo(0, document.body.scrollHeight)")
         time.sleep(interval)
         curr_height = browser.execute_script("return document.body.scrollHeight")
-        if curr_height == prev_height:
+        if prev_height == curr_height and more_jobs:
+            more_jobs.click()
+        if count == 70:
             break
         prev_height = curr_height
 
@@ -45,4 +49,3 @@ def requests_data_collect():
             data = job_title, company_name, company_loc, job_posted_date
             writer.writerow(data)
 
-requests_data_collect()

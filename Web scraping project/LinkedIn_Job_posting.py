@@ -7,6 +7,7 @@ import time
 browser = webdriver.Chrome()
 browser.maximize_window()
 
+#Job search automation function with selenium
 def selenium_job_search():
     url = "https://www.linkedin.com/jobs/jobs-in-union-ky?trk=homepage-basic_intent-module-jobs&position=1&pageNum=0"
     browser.get(url)
@@ -17,6 +18,7 @@ def selenium_job_search():
     job_location.clear()
     job_location.send_keys("United States", Keys.ENTER)
 
+#Collect the data from Linkedin website by scrolling down itself
 def requests_data_collect():
     selenium_job_search()
     interval = 2
